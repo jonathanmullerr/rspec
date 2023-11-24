@@ -32,7 +32,7 @@ RSpec.describe CustomersController, type: :routing do
     end
 
     it "routes to #destroy" do
-      expect(delete: "/customers/1").to route_to("customers#destroy", id: "1")
+      is_expected.to route(:delete, "/customers/1").to(action: :destroy, id: 1)
     end
   end
 end
